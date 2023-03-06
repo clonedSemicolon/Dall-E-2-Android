@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DallE2-Android</string>
+    <string name="explore_anything_you_want">Explore anything you want!!!</string>
+    <string name="image_desctiption">Image Desctiption</string>
+    <string name="generate_images">Generate Images</string>
+</resources>
