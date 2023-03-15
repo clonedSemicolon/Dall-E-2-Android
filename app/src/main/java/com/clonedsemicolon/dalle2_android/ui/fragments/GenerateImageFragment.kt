@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import com.clonedsemicolon.dalle2_android.R
 import com.clonedsemicolon.dalle2_android.databinding.FragmentGenerateImageBinding
 import com.clonedsemicolon.dalle2_android.ui.viewmodel.GenerateImageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GenerateImageFragment : Fragment() {
 
     companion object {
@@ -40,7 +42,10 @@ class GenerateImageFragment : Fragment() {
 
     init {
         binding.btnGenerate.setOnClickListener {
-
+            val promptText = binding.etPrompt.text.toString()
+            if(promptText.isNotBlank()){
+                viewModel.generateImageFromPrompt()
+            }
         }
     }
 
