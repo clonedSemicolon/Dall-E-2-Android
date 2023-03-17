@@ -18,11 +18,11 @@ class GenerateImageViewModel @Inject constructor(private val generateUseCase:Gen
 
 
     fun generateImageFromPrompt(requestModel: RequestModel){
-        generateUseCase.generate(requestModel).collect{
+        generateUseCase(requestModel).collect{
             _state.emit(it)
         }
 
-        }
     }
+}
 
 
