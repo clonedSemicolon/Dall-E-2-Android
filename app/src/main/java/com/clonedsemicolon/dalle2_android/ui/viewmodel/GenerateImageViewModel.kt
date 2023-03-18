@@ -22,7 +22,7 @@ class GenerateImageViewModel @Inject constructor(private val generateUseCase:Gen
 
     fun generateImageFromPrompt(requestModel: RequestModel) {
         viewModelScope.launch {
-            generateUseCase(requestModel).collect {
+            generateUseCase.generate(requestModel).collect {
                 _state.emit(it)
             }
         }

@@ -5,6 +5,6 @@ import com.clonedsemicolon.dalle2_android.domain.repository.ImageGenerateReposit
 import javax.inject.Inject
 
 class GenerateUseCase @Inject constructor(private val repository: ImageGenerateRepository){
-    operator fun invoke(requestModel: RequestModel) = repository.generateImage(requestModel)
+     fun generate(requestModel: RequestModel) = repository.generateImage(requestModel)
 
 }
