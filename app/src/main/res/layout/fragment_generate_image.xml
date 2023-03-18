@@ -59,16 +59,135 @@
             android:orientation="vertical">
 
             <GridLayout
-                android:id="@+id/grid_image"
+                android:id="@+id/generatedImagesGrid"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:columnCount="3">
+                android:layout_marginTop="10dp"
+                android:columnCount="2"
+                android:visibility="gone"
+                tools:visibility="visible">
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/generatedImageCard"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="2dp"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:id="@+id/generatedImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/generatedImageCard2"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/card_elevation_small"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:id="@+id/generatedImageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/generatedImageCard3"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/card_elevation_small"
+
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:id="@+id/generatedImageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/generatedImageCard4"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/card_elevation_small"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:id="@+id/generatedImageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/generatedImageCard5"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/card_elevation_small"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:id="@+id/generatedImageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/generatedImageCard6"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="@dimen/margin_small"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/card_elevation_small"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:id="@+id/generatedImageView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </com.google.android.material.card.MaterialCardView>
             </GridLayout>
 
         </LinearLayout>
-
-
 
     </ScrollView>
 

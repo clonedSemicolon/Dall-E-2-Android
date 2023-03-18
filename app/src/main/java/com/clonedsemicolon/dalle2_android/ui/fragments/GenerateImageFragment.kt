@@ -24,7 +24,7 @@ class GenerateImageFragment : Fragment() {
 
     private lateinit var viewModel: GenerateImageViewModel
     private lateinit var binding: FragmentGenerateImageBinding
-    private val hdImageSize = 1024
+    private val hdImageSize = "1024x1024"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +48,7 @@ class GenerateImageFragment : Fragment() {
         binding.btnGenerate.setOnClickListener {
             val promptText = binding.etPrompt.text.toString()
             if(promptText.isNotBlank()){
-                viewModel.generateImageFromPrompt(RequestModel(4,promptText,"1024x1024"))
+                viewModel.generateImageFromPrompt(RequestModel(4,promptText,hdImageSize))
             }
         }
 

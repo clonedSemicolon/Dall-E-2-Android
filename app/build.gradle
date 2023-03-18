@@ -79,8 +79,6 @@ dependencies {
     // Shimmer Effect
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 
-
-
     // Loading Button
     implementation group: 'com.apachat', name: 'loadingbutton-android', version: '1.0.11'
 
