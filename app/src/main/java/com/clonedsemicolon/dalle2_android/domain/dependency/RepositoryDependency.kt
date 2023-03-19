@@ -11,16 +11,12 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@Module
+@InstallIn(SingletonComponent::class)
 object RepositoryDependency {
-
-    @Module
-    @InstallIn(SingletonComponent::class)
-    object RepositoryDependency {
-
-        @Provides
-        @Singleton
-        fun provideRepository(source: RemoteDataSource): ImageGenerateRepository {
-            return ImageGenerateRepositoryImpl(source)
-        }
+    @Provides
+    @Singleton
+    fun provideRepository(source: RemoteDataSource): ImageGenerateRepository {
+        return ImageGenerateRepositoryImpl(source)
     }
 }

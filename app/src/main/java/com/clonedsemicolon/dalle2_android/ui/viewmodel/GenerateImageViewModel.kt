@@ -1,5 +1,6 @@
 package com.clonedsemicolon.dalle2_android.ui.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bumptech.glide.load.engine.Resource
@@ -21,7 +22,9 @@ class GenerateImageViewModel @Inject constructor(private val generateUseCase:Gen
     val state = _state.asStateFlow()
 
     fun generateImageFromPrompt(requestModel: RequestModel) {
+        Log.d("requestModel", "generateImageFromPrompt: $requestModel")
         viewModelScope.launch {
+
             generateUseCase.generate(requestModel).collect {
                 _state.emit(it)
             }
