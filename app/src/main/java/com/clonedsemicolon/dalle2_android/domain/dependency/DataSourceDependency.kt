@@ -1,5 +1,6 @@
 package com.clonedsemicolon.dalle2_android.domain.dependency
 
+import android.util.Log
 import com.clonedsemicolon.dalle2_android.data.source.RemoteDataSourceImpl
 import com.clonedsemicolon.dalle2_android.data.source.service.DallEImageGenerateService
 import com.clonedsemicolon.dalle2_android.domain.source.RemoteDataSource

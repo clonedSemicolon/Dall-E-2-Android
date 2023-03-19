@@ -35,7 +35,7 @@ class GenerateImageFragment : BaseFragment<FragmentGenerateImageBinding>(Fragmen
         binding!!.btnGenerate.setOnClickListener(View.OnClickListener {
                 val promptText = binding!!.etPrompt.text.toString()
                 if(promptText.isNotBlank()){
-                    viewModel.generateImageFromPrompt(RequestModel(6,promptText,hdImageSize))
+                    viewModel.generateImageFromPrompt(RequestModel(promptText,6,hdImageSize))
                 }
         })
 

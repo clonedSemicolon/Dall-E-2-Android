@@ -1,7 +1,9 @@
 package com.clonedsemicolon.dalle2_android.domain.dependency
 
+import android.util.Log
 import com.clonedsemicolon.dalle2_android.common.Constants
 import com.clonedsemicolon.dalle2_android.data.source.service.DallEImageGenerateService
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,8 +21,9 @@ object RetrofitDependency {
 
     private var dallE:OkHttpClient = OkHttpClient.Builder().addInterceptor{
         val req:Request = it.request().newBuilder().addHeader("Content-Type","application/json").
-        addHeader("authorization","${Constants.TOKEN}").build()
+        addHeader("authorization", "Bearer ${Constants.TOKEN}").build()
         it.proceed(req)
+
     }.build()
 
     @Provides
